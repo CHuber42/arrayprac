@@ -9,13 +9,13 @@ $(document).ready(function(){
     array2.push(favThings[0]); 
     array2.push(favThings[1]);
     console.log(array2);
-    array2.array.forEach(element => {
-      
+    array2.forEach(element => {
+      var thingsNode = document.createElement("li");
+      console.log(element);
+      thingsNode.textContent = element;
+      document.getElementById("publishedResults").appendChild(thingsNode);
+
     });
   });
 });
 
-var node = document.createElement("LI");                 // Create a <li> node
-var textnode = document.createTextNode("Water");         // Create a text node
-node.appendChild(textnode);                              // Append the text to <li>
-document.getElementById("myList").appendChild(node);     // Append <li> to <ul> with id="myList"
